@@ -623,157 +623,28 @@ const items = [
     date: {year: 2020, month: 'MAR'},
     tags: ['free', 'component']
     },
-    {
-    _id: 79,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 80,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 81,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 82,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 83,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 84,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 85,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 86,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 87,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 88,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 89,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 90,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 91,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 92,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 93,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 94,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 95,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 96,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-    {
-    _id: 97,
-    name: '',
-    desc: '',
-    url: '',
-    date: {year: 2018, month: 'DEC'},
-    tags: []
-    },
-
 ]
+
+const solution = array => {
+    const arr = new Array();
+    array.forEach(e => {
+        e.tags.forEach(el => {
+            if (!(arr.includes(el))) {
+                arr.push(el)
+            } else {
+                console.log('not working')
+            }
+        })
+
+    })
+    console.log(arr)
+    return arr;
+}
+
+export function getTags() {
+    return solution(items);
+}
+
+export function getData() {
+    return items;
+}
