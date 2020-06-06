@@ -8,16 +8,22 @@ import Tags from './tags'
 class Homepage extends Component {
     state = {  
         database: [],
-        term: 'Texts of tags'
+        term: ''
     }
 
     componentDidMount() {
         this.setState({database: getData()})
     }
 
-handleSearch = (e) => {
-    this.setState({term: e.target.value})
-}
+    searchHandler = (e) => {
+        this.setState({term: e.target.value})
+    }
+
+    searchingFor = (term) => {
+        return (x) => {
+          return x.tags.includes(term.toLowerCase()) || !term;
+        };
+      }
 
     render() { 
         const {database, term} = this.state;
@@ -26,12 +32,22 @@ handleSearch = (e) => {
 
             <SearchBar
             term = {term}  
-            updateSearch = {this.handleSearch}         
+            updateSearch = {this.searchHandler}         
             />
 
             <Tags/>
 
-            {database.map(box => ( 
+            {/* {database.map(box => ( 
+            <Box
+            database = {box}
+            year = {box.date.year}
+            month = {box.date.month}
+            tags = {box.tags}
+            />
+            ))} */}
+
+
+            {database.filter(this.searchingFor(term)).map(box => ( 
             <Box
             database = {box}
             year = {box.date.year}

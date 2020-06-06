@@ -10,9 +10,8 @@ const SearchBar = ({term, updateSearch}) => {
         type="text"
         value={term}
         onChange={updateSearch}
+        placeholder="Type the information"
         >
-
-
         </input>
 
         </div>

@@ -8,7 +8,7 @@ const Box = ({database, year, month, tags }) => {
     <center className="center">
     <h1>{database.name}</h1>
     <p>Description {database.desc}</p>
-    <p>URl {database.url}</p>
+    <p>URL {database.url}</p>
     <p>Year added {year}</p>
     <p>Month added {month}</p>
     <p>
