@@ -5,7 +5,7 @@ const Tags = () => {
 
     const arr = getTags();
     return (
-        <div>
+        <div className="container">
         <p>
         {arr.map( e => {
             return `${e} `

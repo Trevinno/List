@@ -3,7 +3,7 @@ import './box.css'
 
 const SearchBar = ({term, updateSearch}) => {
     return ( 
-        <div>
+        <div className="flex-search">
 
         <input
         className="centerbar"
