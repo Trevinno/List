@@ -55,9 +55,8 @@ class Homepage extends Component {
 
             </header>
 
-            <container className="container">
             <Tags/>
-            </container>
+           
 
             {database.filter(this.searchingFor(term)).map(box => ( 
             <Box

@@ -4,7 +4,7 @@ import './box.css'
 
 const Box = ({database, year, month, tags }) => {
     return (  
-    <div>
+    <div className="card card-5">
     <center className="center">
     <h1>{database.name}</h1>
     <p>Description {database.desc}</p>
