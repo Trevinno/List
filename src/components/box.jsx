@@ -4,9 +4,10 @@ import './box.css'
 
 const Box = ({database, year, month, tags }) => {
     return (  
-    <div className="card card-5">
+    <div className="card card-5 fontChivo">
     <center className="center">
-    <h1>{database.name}</h1>
+    <h1 className='headerFont'>{database.name}</h1>
+    <div className='fontSize'>
     <p>Description {database.desc}</p>
     <p>URL {database.url}</p>
     <p>Year added {year}</p>
@@ -16,6 +17,7 @@ const Box = ({database, year, month, tags }) => {
         `${tag}  `
     ))}
     </p>
+    </div>
     </center>
     </div>
     );

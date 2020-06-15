@@ -6,11 +6,11 @@ const SearchBar = ({term, updateSearch}) => {
         <div className="flex-search">
 
         <input
-        className="centerbar"
+        className="centerbar button raise"
         type="text"
         value={term}
         onChange={updateSearch}
-        placeholder="Type the information"
+        placeholder="Search..."
         >
         </input>
 
