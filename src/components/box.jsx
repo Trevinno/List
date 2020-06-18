@@ -8,10 +8,10 @@ const Box = ({database, year, month, tags }) => {
     <center className="center">
     <h1 className='headerFont'>{database.name}</h1>
     <div className='fontSize'>
-    <p>Description {database.desc}</p>
-    <p>URL {database.url}</p>
-    <p>Year added {year}</p>
-    <p>Month added {month}</p>
+    <p>Description: {database.desc}</p>
+    <p>URL: <a href={database.url} target="_blank">{database.url}</a></p>
+    <p>Year added: {year}</p>
+    <p>Month added: {month}</p>
     <p>
     {tags.map(tag => (
         `${tag}  `

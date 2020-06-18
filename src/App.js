@@ -6,9 +6,9 @@ import './components/box.css'
 function App() {
   return (
     <div className="body">
-      <container>
+      <div>
       <Homepage/>
-      </container>
+      </div>
     </div>
   );
 }

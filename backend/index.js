@@ -8,10 +8,9 @@ const app = express();
 const PORT = 5000; 
 
 const exercisesRouter = require('./routes/lists.js');
-
-const MONGODB_URI = 'mongodb+srv://Daru:Darumaka@clustercurated-4syco.azure.mongodb.net/test?retryWrites=true&w=majority'
-
-mongoose.connect(MONGODB_URI || 'mongodb://localhost:27017/vertraulich', {
+// const MONGODB_URI = 'mongodb+srv://Daru:Darumaka@clustercurated-4syco.azure.mongodb.net/test?retryWrites=true&w=majority'
+// MONGODB_URI ||
+mongoose.connect('mongodb://localhost:27017/vertraulich', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true

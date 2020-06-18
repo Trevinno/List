@@ -1,85 +1,134 @@
-import React, {useState} from 'react';
+import React, { Component } from 'react';
+import './box.css'
 
-const AddRe = ({handleSubmit}) => {
+
+class AddRe extends Component {
    
-    const [state, setState] = useState({ 
-        name: '',
-        desc: '',
-        url: '',
-        date: {
-            year: 0, month: ''
-        },
-        tags: []
-    });
-
-  const handleChange = e => {
-    const { name, value } = e.target;
-    setState(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-
-    return (  
-        <form onSubmit={handleSubmit}>
-				<div>
-					<label>Name </label>
+    
+    render() { 
+       const {handleSubmit, kacchanfunc, name, desc, url, month, year, tag1, tag2, tag3} = this.props;
+        return (
+            <React.Fragment>
+            <div className='newTitle'>
+                <h2>Add a Resource</h2>
+            </div>
+            <form onSubmit={handleSubmit} className='newcenter'>
+				<div className='modalbox text-input'>
+					
 					<input
+                        className="input1"
 						type="text"
-						value={state.name}
-                        onChange={handleChange}
+						value={name}
+                        onChange={ (e) => {
+                            kacchanfunc(e, 1)
+                        }}
                         name='name'
 					/>
+                    <label className="input1">Name: </label>
 				</div>
-				<div>
-					<label>Description</label>
-					<textarea
+
+				<div className='modalbox text-input'>
+					
+					<input
                         type='text'
-						value={state.desc}
-                        onChange={handleChange}
+                        className='input1'
+						value={desc}
+                        onChange={(e) => {
+                            kacchanfunc(e, 2)
+                        }}
                         name='desc'
 					/>
+                    <label className='input1'>Description: </label>
 				</div>
-                <div>
-					<label>URL</label>
-					<textarea
-                        type='url'
-						value={state.url}
-                        onChange={handleChange}
+                <div className='modalbox text-input'>
+					
+					<input
+                        type='text'
+                        className='input1'
+						value={url}
+                        onChange={(e) => {
+                            kacchanfunc(e, 3)
+                        }}
                         name='url'
 					/>
+                    <label className='input1'>URL: </label>
 				</div>
-                <div>
-					<label>Month</label>
-					<textarea
+
+                <div className='modalbox text-input'>
+					<input
                         type='text'
-						value={state.date.month}
-                        onChange={handleChange}
-                        name='date.month'
+                        className='input1'
+                        value={month}
+                        onChange={(e) => {
+                            kacchanfunc(e, 4)
+                        }}
+                        name='month'
 					/>
+                    <label className='input1'>Month: </label>
 				</div>
 
-                <div>
-					<label>Year</label>
-					<textarea
-						value={state.date.year}
-						onChange={handleChange}
+                <div className='modalbox text-input'>
+					<input
+                        type='text'
+                        className='input1'
+						value={year}
+                        onChange={(e) => {
+                            kacchanfunc(e, 5)
+                        }}
+                        name='year'
 					/>
-				</div>
+                    <label className='input1'>Year: </label>
+				</div> 
 
-				{/* <div>
-					<label>Topic</label>
-					<select value={topic} onChange={this.handleTopicChange}>
-						<option value="react">React</option>
-						<option value="angular">Angular</option>
-						<option value="vue">Vue</option>
-					</select>
-				</div> */}
-				<button type="submit">Submit</button>
+                <div className='modalbox text-input'>
+					
+					<input
+                        type='text'
+                        className='input1'
+						value={tag1}
+                        onChange={(e) => {
+                            kacchanfunc(e, 6)
+                        }}
+                        name='tag1'
+					/>
+                    <label className='input1'>1st Tag: </label>
+				</div> 
+
+                <div className='modalbox text-input'>
+					
+					<input
+                        type='text'
+                        className='input1'
+						value={tag2}
+                        onChange={(e) => {
+                            kacchanfunc(e, 7)
+                        }}
+                        name='tag2'
+					/>
+                    <label className='input1'>2nd Tag: </label>
+				</div> 
+
+                <div className='modalbox text-input'>
+					
+					<input
+                        type='text'
+                        className='input1'
+						value={tag3}
+                        onChange={(e) => {
+                            kacchanfunc(e, 8)
+                        }}
+                        name='tag3'
+					/>
+                    <label className='input1'>3rd Tag: </label>
+				</div> 
+
+				<button type="submit" className='buttoncenter button raise'>Submit</button>
 			</form>
 
-    );
+
+            </React.Fragment>
+        );
+    }
 }
  
 export default AddRe;

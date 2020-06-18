@@ -13,7 +13,7 @@ const items = [
     desc: 'Designs Block that look slick',
     url: 'https://froala.com/design-blocks',
     date: {year: 2018, month: 'DEC'},
-    tags: ['blocks', 'component', 'ui']
+    tags: ['design', 'component', 'ui']
     },
     {
     _id: 3,
