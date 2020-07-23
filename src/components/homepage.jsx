@@ -179,7 +179,21 @@ class Homepage extends Component {
             className="flex-button button raise"
             onClick={() => this.setModal(true,1)}
             >
-            +
+            + add
+            </button>
+
+            <button
+            className="flex-button button raise"
+            onClick={() => this.setModal(true,1)}
+            >
+            * edit
+            </button>
+
+            <button
+            className="flex-button button raise"
+            onClick={() => this.setModal(true,1)}
+            >
+            - delete
             </button>
 
             <SearchBar
@@ -188,6 +202,7 @@ class Homepage extends Component {
             />
 
             </header>
+          
 
           <Modal
           isOpen={this.state.modalAdd}
@@ -215,7 +230,7 @@ class Homepage extends Component {
           <Modal
           isOpen={this.state.modalEdit}
           shouldCloseOnOverlayClick={true}
-          onRequestClose={() => this.setModal(false,1)}
+          onRequestClose={() => this.setModal(false,2)}
           >
             <EditRe
             name={this.state.name}
@@ -231,6 +246,28 @@ class Homepage extends Component {
             >
 
             </EditRe>
+
+          </Modal>
+
+          <Modal
+          isOpen={this.state.modalDelete}
+          shouldCloseOnOverlayClick={true}
+          onRequestClose={() => this.setModal(false,3)}
+          >
+            <DeleteRe
+            name={this.state.name}
+            desc={this.state.desc}
+            url={this.state.url}
+            month={this.state.month}
+            year={this.state.year}
+            tag1={this.state.tag1}
+            tag2={this.state.tag2}
+            tag3={this.state.tag3}
+            handleSubmit={this.handleEdit}
+            kacchanfunc={this.kacchanfunc}
+            >
+
+            </DeleteRe>
 
           </Modal>
 

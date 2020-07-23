@@ -41,3 +41,61 @@
     "date": {"year": 2019, "month": "JAN"},
     "tags": ["ui", "design", "dashboard"]
 }
+
+{
+    "name": "PandaDoc",
+    "desc": "Profesional Freelance contract template", 
+    "url": "https://www.pandadoc.com/freelance-contract-template/", 
+    "date": {"year": 2019, "month": "JAN"},
+    "tags": ["nontec", "contract"]
+}
+
+{
+    "name": "Programming Fonts",
+    "desc": "Try out the best programming fonts", 
+    "url": "https://app.programmingfonts.org/#agave", 
+    "date": {"year": 2019, "month": "JAN"},
+    "tags": ["font"]
+}
+
+{
+    "name": "Palette",
+    "desc": "Really cool palette picker", 
+    "url": "https://palettte.app/", 
+    "date": {"year": 2019, "month": "JAN"},
+    "tags": ["colors", "rgb"]
+}
+
+{
+    "name": "Mixkit",
+    "desc": "Free HD videos to use in your projects", 
+    "url": "https://mixkit.co/", 
+    "date": {"year": 2019, "month": "FEB"},
+    "tags": ["*********", "rgb"]
+}
+
+{
+    "name": "Iconscout",
+    "desc": "1000+ Pixel perfect vector icons for your next project", 
+    "url": "https://iconscout.com/unicons", 
+    "date": {"year": 2019, "month": "JAN"},
+    "tags": ["icons", "2d", "pixel"]
+}
+
+{
+    "name": "Charts Factory",
+    "desc": "Charts, charts, everywhere", 
+    "url": "https://panel.chartsfactory.com/login", 
+    "date": {"year": 2019, "month": "FEB"},
+    "tags": ["charts"]
+}
+
+{
+    "name": "Sheety",
+    "desc": "Turn any google spreadsheet into your own api", 
+    "url": "https://sheety.co/", 
+    "date": {"year": 2019, "month": "FEB"},
+    "tags": ["google", "api"]
+}
+
+
